@@ -7,13 +7,6 @@ export type Project = {
   image?: string;
 };
 
-export type Experience = {
-  company: string;
-  role: string;
-  period: string;
-  description: string;
-};
-
 export type ContactInfo = {
   email: string;
   github: string;
@@ -29,6 +22,5 @@ export type PortfolioData = {
   profileImage: string;
   skills: string[];
   projects: Project[];
-  experience: Experience[];
   contact: ContactInfo;
 };
