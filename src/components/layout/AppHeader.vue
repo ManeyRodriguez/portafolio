@@ -7,14 +7,16 @@
         href="#inicio"
         class="text-left text-lg font-extrabold tracking-[0.2em] text-white"
       >
-        JMR
+        {{portfolioData.abreviatedName || portfolioData.name.split(' ').map(n => n[0]).join('')}}
       </a>
-
+  
       <nav class="flex flex-wrap items-center gap-3 md:gap-6">
+        
         <a
           href="#inicio"
           class="rounded-lg px-2 py-1 text-sm font-medium text-white transition hover:text-cyan-400"
         >
+        
           Inicio
         </a>
 
@@ -43,11 +45,15 @@
           href="#contacto"
           class="rounded-lg px-2 py-1 text-sm font-medium text-white transition hover:text-cyan-400"
         >
-          Contacto
+          Contacto  
         </a>
+          
       </nav>
+   
     </div>
   </header>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { portfolioData } from '../../data/portfolio';
+</script>
