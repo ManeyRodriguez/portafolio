@@ -3,6 +3,7 @@
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <div class="mb-10">
         <p class="reveal-item mb-3 text-sm font-bold uppercase tracking-[0.2em] text-cyan-400">
+          
           Sobre mí
         </p>
 

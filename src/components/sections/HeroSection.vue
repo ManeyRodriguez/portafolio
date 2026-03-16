@@ -28,7 +28,9 @@
           <span
             class="inline-flex items-center rounded-full border border-cyan-400/20 bg-cyan-400/10 px-4 py-2 text-sm font-medium text-cyan-300"
           >
+          <i class="fas fa-map-marker-alt mr-2 text-cyan-400"></i>
             {{ portfolioData.location }}
+            
           </span>
         </div>
 
@@ -37,6 +39,7 @@
             href="#proyectos"
             class="inline-flex min-h-12 items-center justify-center rounded-xl bg-cyan-400 px-6 text-sm font-bold text-slate-950 transition hover:scale-[1.03] hover:bg-cyan-300"
           >
+          <i class="fas fa-briefcase mr-2 text-slate-950"></i>
             Ver proyectos
           </a>
 
@@ -44,6 +47,7 @@
             href="#contacto"
             class="inline-flex min-h-12 items-center justify-center rounded-xl border border-white/15 px-6 text-sm font-bold text-white transition hover:scale-[1.03] hover:border-cyan-400 hover:text-cyan-400"
           >
+          <i class="fas fa-envelope mr-2 text-cyan-400"></i>
             Contáctame
           </a>
         </div>
@@ -53,7 +57,9 @@
         <img
           :src="portfolioData.profileImage"
           :alt="`Foto de ${portfolioData.name}`"
-          class="w-full max-w-sm rounded-3xl border border-white/10 bg-white/5 object-contain shadow-2xl"
+          class="w-full max-w-sm rounded-3xl border 
+          border-white/10 bg-white/5 object-contain 
+          shadow-4xl hover:scale-[1.02] transition duration-500"
         />
       </div>
     </div>
