@@ -1,5 +1,25 @@
 import type { PortfolioData } from "../types/portfolio";
 
+ const skills = [
+  'Vue 3',
+  'TypeScript',
+  'JavaScript',
+  'Quasar',
+  'Pinia',
+  'GraphQL',
+  'Node.js',
+  'NestJS',
+  'TypeORM',
+  'MySQL',
+  'Git',
+  'HTML5',
+  'CSS3',
+  'Tailwind CSS',
+  'Sass',
+  'GSAP',
+  'Responsive Design',
+];
+
 
 export const portfolioData: PortfolioData = {
   name: 'Ing. Juan Manuel Rodríguez Pérez',
@@ -12,25 +32,7 @@ export const portfolioData: PortfolioData = {
     'Me especializo en construir interfaces modernas, sistemas escalables y experiencias orientadas a negocio. Disfruto trabajar con arquitecturas limpias, buenas prácticas y soluciones bien estructuradas.',
   location: 'Moca, República Dominicana',
   profileImage: '/images/profile/foto_portafolio_juan_manuel.png',
-  skills: [
-    'Vue 3',
-    'TypeScript',
-    'JavaScript',
-    'Quasar',
-    'Pinia',
-    'GraphQL',
-    'Node.js',
-    'NestJS',
-    'TypeORM',
-    'MySQL',
-    'Git',
-      'HTML5',
-    'CSS3',
-    'Tailwind CSS',
-    'Sass',
-    'GSAP',
-    'Responsive Design',
-  ],
+  skills: [...skills],  
   projects: [
     {
       title: 'BillHub',
@@ -56,4 +58,27 @@ contact: {
     github: 'https://github.com/ManeyRodriguez',
     linkedin: 'https://www.linkedin.com/in/juan-manuel-rodriguez-perez-08a09665/',
   },
+};
+
+
+
+export const iconSkills: Record<string, string> = {
+  'Vue 3': 'fa-brands fa-vuejs',
+  TypeScript: 'fa-solid fa-code',
+  JavaScript: 'fa-brands fa-js',
+  Quasar: 'fa-solid fa-bolt',
+  Pinia: 'fa-solid fa-box-open',
+  GraphQL: 'fa-solid fa-diagram-project',
+  'Node.js': 'fa-brands fa-node-js',
+  NestJS: 'fa-solid fa-layer-group',
+  TypeORM: 'fa-solid fa-database',
+  MySQL: 'fa-solid fa-database',
+  Git: 'fa-brands fa-git-alt',
+  HTML5: 'fa-brands fa-html5',
+  CSS3: 'fa-brands fa-css3-alt',
+  'Tailwind CSS': 'fa-brands fa-tailwind-css',
+  Sass: 'fa-brands fa-sass',
+  GSAP: 'fa-solid fa-wand-magic-sparkles',
+  'Responsive Design': 'fa-solid fa-mobile-screen-button',
+  React: 'fa-brands fa-react',
 };
