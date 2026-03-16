@@ -3,6 +3,8 @@ import type { PortfolioData } from "../types/portfolio";
 
 export const portfolioData: PortfolioData = {
   name: 'Ing. Juan Manuel Rodríguez Pérez',
+  abreviatedName: '{JMRP}',
+  alias: 'Maney Rodríguez',
   role: 'Software Developer',
   summary:
     'Desarrollador e ingeniero de software con 2 años de experiencia en el mercado, enfocado en la construcción de soluciones frontend y backend con Vue, TypeScript, GraphQL, Quasar y tecnologías orientadas a entornos empresariales.',
@@ -34,18 +36,18 @@ export const portfolioData: PortfolioData = {
       title: 'BillHub',
       description:
         'Plataforma de facturación electrónica con gestión de documentos, reportes, permisos, auditoría y certificados digitales.',
-      technologies: ['Vue 3', 'Quasar', 'GraphQL', 'Node.js', 'TypeORM'],
+      technologies: ['Vue 3', 'Quasar', 'GraphQL', 'Node.js', 'TypeORM', 'MySQL'],
       image: '/images/projects/billhub_sin_texto.png',
-      demoUrl: '',
+      demoUrl: 'https://www.billhub.do',
       repoUrl: '',
     },
     {
-      title: 'Sistema de Gestión Académica',
+      title: 'Sistema de Gestión Académica (SIGESCAL)',
       description:
-        'Aplicación para la gestión de procesos académicos, formularios administrativos y módulos operativos.',
-      technologies: ['React', 'TypeScript', 'NestJS', 'SQL'],
+        'Aplicación realizada en grupo de pasantía donde formamos parte del equipo de desarrollo para la gestión de procesos académicos, formularios administrativos y módulos operativos para la Universidad UAPA.',
+      technologies: ['React', 'TypeScript', 'NestJS', 'MySQL'],
       image: '/images/projects/sistema_academico_sin_texto.png',
-      demoUrl: '',
+      demoUrl: 'https://sigescal.gotransport.app/auth/login',
       repoUrl: '',
     },
   ],
