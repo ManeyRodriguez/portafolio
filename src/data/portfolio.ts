@@ -1,7 +1,7 @@
 import type { PortfolioData } from '../types/portfolio';
 
 export const portfolioData: PortfolioData = {
-  name: 'Juan Manuel Rodríguez Pérezs',
+  name: 'Juan Manuel Rodríguez Pérez',
   role: 'Software Developer',
   summary:
     'Desarrollador e ingeniero de software con 2 años de experiencia en el mercado, enfocado en la construcción de soluciones frontend y backend con Vue, TypeScript, GraphQL, Quasar y tecnologías orientadas a entornos empresariales.',
