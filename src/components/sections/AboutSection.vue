@@ -17,7 +17,7 @@
       </div>
 
       <div class="reveal-item rounded-3xl border border-white/10 bg-white/5 p-6 shadow-2xl sm:p-8">
-        <p class="text-base leading-8 text-slate-300 sm:text-lg">
+        <p class="text-base leading-8 text-slate-300 sm:text-lg text-justify">
           {{ portfolioData.about }}
         </p>
       </div>

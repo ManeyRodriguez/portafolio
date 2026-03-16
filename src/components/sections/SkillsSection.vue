@@ -10,7 +10,7 @@
           Stack técnico
         </h2>
 
-        <p class="skills-heading max-w-3xl text-base leading-8 text-slate-400 sm:text-lg">
+        <p class="skills-heading max-w-4xl text-base leading-8 text-slate-400 sm:text-lg text-justify">
           Herramientas y tecnologías con las que construyo interfaces, servicios y soluciones empresariales.
         </p>
       </div>

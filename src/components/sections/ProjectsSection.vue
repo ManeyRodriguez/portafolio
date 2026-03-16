@@ -42,7 +42,7 @@
               {{ project.title }}
             </h3>
 
-            <p class="mb-5 text-base leading-7 text-slate-300">
+            <p class="mb-5 text-base leading-7 text-slate-300 text-justify">
               {{ project.description }}
             </p>
 

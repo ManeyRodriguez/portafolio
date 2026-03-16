@@ -20,7 +20,7 @@
           {{ portfolioData.role }}
         </p>
 
-        <p class="hero-item mb-6 max-w-3xl text-base leading-8 text-slate-300 sm:text-lg">
+        <p class="hero-item mb-6 max-w-3xl text-base leading-8 text-slate-300 sm:text-lg text-justify">
           {{ portfolioData.summary }}
         </p>
 
