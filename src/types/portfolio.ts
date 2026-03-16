@@ -15,6 +15,8 @@ export type ContactInfo = {
 
 export type PortfolioData = {
   name: string;
+  abreviatedName?: string;
+  alias?: string;
   role: string;
   summary: string;
   about: string;
