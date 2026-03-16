@@ -21,7 +21,7 @@
           :key="project.title"
           class="project-card overflow-hidden rounded-3xl border border-white/10 bg-white/5 shadow-2xl transition duration-300 hover:-translate-y-1 hover:border-cyan-400/20"
         >
-          <div class="flex h-60 items-center justify-center overflow-hidden bg-slate-900">
+          <div class="m-8 flex h-60 items-center justify-center overflow-hidden bg-slate-900 rounded-2xl">
             <img
               v-if="project.image"
               :src="project.image"
