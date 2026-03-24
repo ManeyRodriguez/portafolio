@@ -46,26 +46,51 @@ export const portfolioData: PortfolioData = {
   location: 'Moca, República Dominicana',
   profileImage: '/images/profile/foto_portafolio_juan_manuel.png',
   skills: [...skills],
-  projects: [
+projects: [
+  {
+    title: 'BillHub',
+    description:
+      'Plataforma de facturación electrónica con gestión de documentos, reportes, permisos, auditoría y certificados digitales.',
+    technologies: ['Vue 3', 'Quasar', 'GraphQL', 'Node.js', 'TypeORM', 'MySQL'],
+    image: '/images/projects/billhub_sin_texto.png',
+    demoUrl: 'https://www.billhub.do',
+    repoUrl: '',
+  },
+
+  {
+    title: 'Mediturno',
+    description:
+      'Sistema de gestión médica para la administración de pacientes, doctores y visitas, con priorización por triaje, colas de atención en tiempo real y automatización de procesos clínicos.',
+    technologies: [
+      'Vue 3',
+      'Vite',
+      'TypeScript',
+      'Pinia',
+      'Vue Router',
+      'Tailwind CSS',
+      'Zod',
+      'Node.js',
+      'Express',
+      'Prisma ORM',
+      'PostgreSQL',
+      'Redis',
+      'BullMQ',
+      'WebSocket',
+    ],
+    image: '/images/projects/mediturno.png',
+    demoUrl: '',
+    repoUrl: '',
+  },
     {
-      title: 'BillHub',
-      description:
-        'Plataforma de facturación electrónica con gestión de documentos, reportes, permisos, auditoría y certificados digitales.',
-      technologies: ['Vue 3', 'Quasar', 'GraphQL', 'Node.js', 'TypeORM', 'MySQL'],
-      image: '/images/projects/billhub_sin_texto.png',
-      demoUrl: 'https://www.billhub.do',
-      repoUrl: '',
-    },
-    {
-      title: 'Sistema de Gestión Académica (SIGESCAL)',
-      description:
-        'Aplicación realizada en grupo de pasantía donde formamos parte del equipo de desarrollo para la gestión de procesos académicos, formularios administrativos y módulos operativos para la Universidad UAPA.',
-      technologies: ['React', 'TypeScript', 'NestJS', 'MySQL'],
-      image: '/images/projects/sistema_academico_sin_texto.png',
-      demoUrl: 'https://sigescal.gotransport.app/auth/login',
-      repoUrl: '',
-    },
-  ],
+    title: 'Sistema de Gestión Académica (SIGESCAL)',
+    description:
+      'Aplicación realizada en grupo de pasantía donde formamos parte del equipo de desarrollo para la gestión de procesos académicos, formularios administrativos y módulos operativos para la Universidad UAPA.',
+    technologies: ['React', 'TypeScript', 'NestJS', 'MySQL'],
+    image: '/images/projects/sistema_academico_sin_texto.png',
+    demoUrl: 'https://sigescal.gotransport.app/auth/login',
+    repoUrl: '',
+  },
+],
   contact: {
     email: 'maneyrodriguez@gmail.com',
     github: 'https://github.com/ManeyRodriguez',
