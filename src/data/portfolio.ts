@@ -78,7 +78,7 @@ projects: [
       'WebSocket',
     ],
     image: '/images/projects/mediturno.png',
-    demoUrl: '',
+    demoUrl: 'https://extraordinary-cactus-9e936a.netlify.app/',
     repoUrl: '',
   },
     {
