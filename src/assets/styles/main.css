@@ -1,1 +1,47 @@
-@import "tailwindcss";
+@import 'tailwindcss';
+
+:root {
+  color-scheme: dark;
+  --page-bg: #020617;
+  --page-accent: #22d3ee;
+  --page-text: #e2e8f0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background:
+    radial-gradient(circle at top, rgba(34, 211, 238, 0.16), transparent 30%),
+    linear-gradient(180deg, #020617 0%, #0f172a 100%);
+  color: var(--page-text);
+  font-family: 'Manrope', 'Segoe UI', sans-serif;
+  text-rendering: optimizeLegibility;
+}
+
+:where(h1, h2, h3) {
+  font-family: 'Space Grotesk', 'Manrope', sans-serif;
+}
+
+a,
+button {
+  transition:
+    color 180ms ease,
+    background-color 180ms ease,
+    border-color 180ms ease,
+    transform 180ms ease;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid rgba(34, 211, 238, 0.9);
+  outline-offset: 3px;
+}
+
+::selection {
+  background: rgba(34, 211, 238, 0.3);
+  color: #f8fafc;
+}
