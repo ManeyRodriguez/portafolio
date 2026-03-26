@@ -1,27 +1,20 @@
 <template>
   <section id="habilidades" ref="sectionRef" class="bg-slate-900/70 py-20">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-      <div class="mb-10">
-        <p class="skills-heading mb-3 text-sm font-bold uppercase tracking-[0.2em] text-cyan-400">
-          Tecnologías
-        </p>
-
-        <h2 class="skills-heading mb-4 text-3xl font-bold text-white sm:text-4xl">
-          Stack técnico
-        </h2>
-
-        <p class="skills-heading max-w-4xl text-base leading-8 text-slate-400 sm:text-lg text-justify">
-          Herramientas y tecnologías con las que construyo interfaces, servicios y soluciones empresariales.
-        </p>
-      </div>
+      <SectionTitle
+        class="mb-10 skills-heading"
+        eyebrow="Tecnologías"
+        title="Stack técnico"
+        description="Herramientas y tecnologías con las que construyo interfaces, servicios y soluciones empresariales."
+      />
 
       <div ref="chipsWrapper" class="flex flex-wrap gap-3">
         <span
           v-for="skill in portfolioData.skills"
           :key="skill"
-          class="skill-chip rounded-full border border-cyan-400/20 bg-cyan-400/10 px-4 py-2 text-sm font-semibold text-cyan-300 transition duration-300 hover:-translate-y-0.5 hover:bg-cyan-400/15"
+          class="skill-chip inline-flex items-center gap-2 rounded-full border border-cyan-400/20 bg-cyan-400/10 px-4 py-2 text-sm font-semibold text-cyan-300 transition duration-300 hover:-translate-y-0.5 hover:bg-cyan-400/15"
         >
-          <i :class="iconSkills[skill]" />
+          <span class="h-2 w-2 rounded-full bg-cyan-300"></span>
           {{ skill }}
         </span>
       </div>
@@ -31,7 +24,8 @@
 
 <script setup lang="ts">
 import { onBeforeUnmount, onMounted, ref } from 'vue';
-import { iconSkills, portfolioData } from '../../data/portfolio';
+import SectionTitle from '../ui/SectionTitle.vue';
+import { portfolioData } from '../../data/portfolio';
 import { gsap } from '../../lib/gsap';
 
 const sectionRef = ref<HTMLElement | null>(null);

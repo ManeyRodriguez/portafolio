@@ -1,19 +1,12 @@
 <template>
   <section id="proyectos" ref="sectionRef" class="bg-slate-950 py-20">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-      <div class="mb-10">
-        <p class="projects-heading mb-3 text-sm font-bold uppercase tracking-[0.2em] text-cyan-400">
-          Proyectos
-        </p>
-
-        <h2 class="projects-heading mb-4 text-3xl font-bold text-white sm:text-4xl">
-          Trabajos destacados
-        </h2>
-
-        <p class="projects-heading max-w-3xl text-base leading-8 text-slate-400 sm:text-lg">
-          Proyectos que representan bien mi perfil técnico y el tipo de soluciones que puedo construir.
-        </p>
-      </div>
+      <SectionTitle
+        class="mb-10 projects-heading"
+        eyebrow="Proyectos"
+        title="Trabajos destacados"
+        description="Proyectos que representan bien mi perfil técnico y el tipo de soluciones que puedo construir."
+      />
 
       <div ref="cardsWrapper" class="grid gap-6 lg:grid-cols-2">
         <article
@@ -21,11 +14,17 @@
           :key="project.title"
           class="project-card overflow-hidden rounded-3xl border border-white/10 bg-white/5 shadow-2xl transition duration-300 hover:-translate-y-1 hover:border-cyan-400/20"
         >
-          <div class="m-8 flex h-60 items-center justify-center overflow-hidden bg-slate-900 rounded-2xl">
+          <div
+            class="m-8 flex h-60 items-center justify-center overflow-hidden bg-slate-900 rounded-2xl"
+          >
             <img
               v-if="project.image"
               :src="project.image"
               :alt="project.title"
+              :width="project.imageWidth"
+              :height="project.imageHeight"
+              loading="lazy"
+              decoding="async"
               class="h-full w-full object-contain transition duration-500 hover:scale-[1.02]"
             />
 
@@ -50,9 +49,9 @@
               <span
                 v-for="tech in project.technologies"
                 :key="`${project.title}-${tech}`"
-                class=" rounded-full border border-cyan-400/20 bg-cyan-400/10 px-3 py-1.5 text-xs font-semibold text-cyan-300 sm:text-sm"
+                class="inline-flex items-center gap-2 rounded-full border border-cyan-400/20 bg-cyan-400/10 px-3 py-1.5 text-xs font-semibold text-cyan-300 sm:text-sm"
               >
-               <i :class="iconSkills[tech]" />
+                <span class="h-2 w-2 rounded-full bg-cyan-300"></span>
                 {{ tech }}
               </span>
             </div>
@@ -62,10 +61,13 @@
                 v-if="project.demoUrl"
                 :href="project.demoUrl"
                 target="_blank"
-                rel="noreferrer"
-                class="text-sm font-semibold text-cyan-400 transition hover:text-cyan-300"
+                rel="noopener noreferrer"
+                class="inline-flex items-center text-sm font-semibold text-cyan-400 transition hover:text-cyan-300"
               >
-                <i class="fas fa-external-link-alt mr-2 text-cyan-400"></i>
+                <AppIcon
+                  name="external-link"
+                  class="mr-2 h-4 w-4 text-cyan-400"
+                />
                 Ver proyecto
               </a>
 
@@ -73,9 +75,10 @@
                 v-if="project.repoUrl"
                 :href="project.repoUrl"
                 target="_blank"
-                rel="noreferrer"
-                class="text-sm font-semibold text-cyan-400 transition hover:text-cyan-300"
+                rel="noopener noreferrer"
+                class="inline-flex items-center text-sm font-semibold text-cyan-400 transition hover:text-cyan-300"
               >
+                <AppIcon name="github" class="mr-2 h-4 w-4 text-cyan-400" />
                 Código
               </a>
             </div>
@@ -88,7 +91,9 @@
 
 <script setup lang="ts">
 import { onBeforeUnmount, onMounted, ref } from 'vue';
-import { iconSkills, portfolioData } from '../../data/portfolio';
+import AppIcon from '../ui/AppIcon.vue';
+import SectionTitle from '../ui/SectionTitle.vue';
+import { portfolioData } from '../../data/portfolio';
 import { gsap } from '../../lib/gsap';
 
 const sectionRef = ref<HTMLElement | null>(null);

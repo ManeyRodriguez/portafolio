@@ -1,12 +1,9 @@
 <template>
-  <footer
-    ref="footerRef"
-    class="border-t border-cyan-400/10 bg-slate-900"
-  >
+  <footer ref="footerRef" class="border-t border-cyan-400/10 bg-slate-900">
     <div
       class="mx-auto flex max-w-7xl items-center justify-center px-4 py-8 text-center text-sm text-slate-300 sm:px-6 lg:px-8"
     >
-      © 2026 Juan Manuel Rodríguez. Todos los derechos reservados.
+      © {{ currentYear }} Juan Manuel Rodríguez. Todos los derechos reservados.
     </div>
   </footer>
 </template>
@@ -16,6 +13,7 @@ import { onBeforeUnmount, onMounted, ref } from 'vue';
 import { gsap } from '../../lib/gsap';
 
 const footerRef = ref<HTMLElement | null>(null);
+const currentYear = new Date().getFullYear();
 let ctx: gsap.Context | null = null;
 
 onMounted(() => {

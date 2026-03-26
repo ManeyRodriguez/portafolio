@@ -8,19 +8,27 @@
       class="mx-auto grid max-w-7xl gap-12 px-4 py-20 sm:px-6 md:grid-cols-[minmax(0,1.2fr)_minmax(280px,420px)] md:items-center lg:px-8 lg:py-28"
     >
       <div>
-        <p class="hero-item mb-4 text-sm font-bold uppercase tracking-[0.2em] text-cyan-400">
+        <p
+          class="hero-item mb-4 text-sm font-bold uppercase tracking-[0.2em] text-cyan-400"
+        >
           Portafolio profesional
         </p>
 
-        <h1 class="hero-item mb-5 text-4xl font-extrabold leading-tight text-white sm:text-5xl lg:text-7xl">
+        <h1
+          class="hero-item mb-5 text-4xl font-extrabold leading-tight text-white sm:text-5xl lg:text-7xl"
+        >
           {{ portfolioData.name }}
         </h1>
 
-        <p class="hero-item mb-4 text-lg font-semibold text-cyan-400 sm:text-xl">
+        <p
+          class="hero-item mb-4 text-lg font-semibold text-cyan-400 sm:text-xl"
+        >
           {{ portfolioData.role }}
         </p>
 
-        <p class="hero-item mb-6 max-w-3xl text-base leading-8 text-slate-300 sm:text-lg text-justify">
+        <p
+          class="hero-item mb-6 max-w-3xl text-base leading-8 text-slate-300 sm:text-lg text-justify"
+        >
           {{ portfolioData.summary }}
         </p>
 
@@ -28,9 +36,8 @@
           <span
             class="inline-flex items-center rounded-full border border-cyan-400/20 bg-cyan-400/10 px-4 py-2 text-sm font-medium text-cyan-300"
           >
-          <i class="fas fa-map-marker-alt mr-2 text-cyan-400"></i>
+            <AppIcon name="location" class="mr-2 h-4 w-4 text-cyan-400" />
             {{ portfolioData.location }}
-            
           </span>
         </div>
 
@@ -39,7 +46,7 @@
             href="#proyectos"
             class="inline-flex min-h-12 items-center justify-center rounded-xl bg-cyan-400 px-6 text-sm font-bold text-slate-950 transition hover:scale-[1.03] hover:bg-cyan-300"
           >
-          <i class="fas fa-briefcase mr-2 text-slate-950"></i>
+            <AppIcon name="briefcase" class="mr-2 h-4 w-4 text-slate-950" />
             Ver proyectos
           </a>
 
@@ -47,7 +54,7 @@
             href="#contacto"
             class="inline-flex min-h-12 items-center justify-center rounded-xl border border-white/15 px-6 text-sm font-bold text-white transition hover:scale-[1.03] hover:border-cyan-400 hover:text-cyan-400"
           >
-          <i class="fas fa-envelope mr-2 text-cyan-400"></i>
+            <AppIcon name="contact" class="mr-2 h-4 w-4 text-cyan-400" />
             Contáctame
           </a>
         </div>
@@ -57,9 +64,11 @@
         <img
           :src="portfolioData.profileImage"
           :alt="`Foto de ${portfolioData.name}`"
-          class="w-full max-w-sm rounded-3xl border 
-          border-white/10 bg-white/5 object-contain 
-          shadow-4xl hover:scale-[1.02] transition duration-500"
+          :width="portfolioData.profileImageWidth"
+          :height="portfolioData.profileImageHeight"
+          fetchpriority="high"
+          decoding="async"
+          class="w-full max-w-sm rounded-3xl border border-white/10 bg-white/5 object-contain shadow-4xl transition duration-500 hover:scale-[1.02]"
         />
       </div>
     </div>
@@ -68,6 +77,7 @@
 
 <script setup lang="ts">
 import { onBeforeUnmount, onMounted, ref } from 'vue';
+import AppIcon from '../ui/AppIcon.vue';
 import { portfolioData } from '../../data/portfolio';
 import { gsap } from '../../lib/gsap';
 
