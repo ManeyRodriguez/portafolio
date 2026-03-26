@@ -34,10 +34,12 @@ export const useSectionReveal = (
         duration,
         stagger,
         ease: 'power3.out',
+        clearProps: 'all',
         scrollTrigger: {
           trigger: root,
           start,
           toggleActions: 'play none none none',
+          once: true,
         },
       });
     }, root);

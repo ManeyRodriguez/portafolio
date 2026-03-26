@@ -5,6 +5,8 @@ export type Project = {
   demoUrl?: string;
   repoUrl?: string;
   image?: string;
+  imageWidth?: number;
+  imageHeight?: number;
 };
 
 export type ContactInfo = {
@@ -22,6 +24,8 @@ export type PortfolioData = {
   about: string;
   location: string;
   profileImage: string;
+  profileImageWidth?: number;
+  profileImageHeight?: number;
   skills: string[];
   projects: Project[];
   contact: ContactInfo;
